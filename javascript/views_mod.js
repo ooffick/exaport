@@ -380,7 +380,11 @@ var exaportViewEdit = {};
 				$item.data('portfolio', data);
 			}
 		}
-//		alert(data.itemid);		
+//		alert(data.itemid);
+		if(typeof(data.type) != "string") { 
+			$item = $('<span></span>');
+			return $item; 
+		}
 
 		$item.addClass('item');
 		$item.css('position', 'relative');
